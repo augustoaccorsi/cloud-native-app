@@ -21,7 +21,7 @@
         },
         {
             "name": "nginx",
-            "image": "augustoaccorsi/nginx-arqsw-aws:latest",
+            "image": "augustoaccorsi/app-nginx-aws:latest",
             "essential": true,
             "memory": 200,
             "portMappings": [
