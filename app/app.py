@@ -7,7 +7,7 @@ professor = '</body>Professor: Kleinner Silva Farias de Oliveira</html>'
 
 app = Flask(__name__)
 
-@app.route("/app", methods=['GET'])
+@app.route("/app/home", methods=['GET'])
 def home():
     return header_text + description + group, 200
 
