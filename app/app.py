@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,  render_template
 
 header_text = '''<html>\n<head> <title>Arquitetura de Software - Cloud Native App</title> </head>\n<body>'''
 description = '''<p>Essa aplicação é uma demostração de uma Cloud Native Application</p>\n'''
