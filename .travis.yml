@@ -3,15 +3,14 @@ services:
   - docker
 before_script: pip install docker-compose
 script:
-  - docker-compose up --build -d
+  - docker-compose build
 after_success:
-  - if [[ "$TRAVIS_BRANCH" == "main" ]]; then
-      docker login -u augustoaccorsi -p $DOCKER_PASSWORD ;
-      docker-compose up --build -d ;
-      docker tag app augustoaccorsi/app-arqsw-aws ;
-      docker tag nginx augustoaccorsi/nginx-arqsw-aws ;
-      docker push augustoaccorsi/app-arqsw-aws ;
-      docker push augustoaccorsi/nginx-arqsw-aws ;
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
+  - docker-compose build ;
+  - docker tag app $DOCKER_USERNAME/app-arqsw-aws ;
+  - docker tag nginx $DOCKER_USERNAME/nginx-arqsw-aws ;
+  - docker push $DOCKER_USERNAME/app-arqsw-aws ;
+  - docker push $DOCKER_USERNAME/nginx-arqsw-aws ;
 
 fi:
 
