@@ -16,7 +16,7 @@ def prof():
     return header_text + description + professor, 200
 
 @app.route("/app/teste", methods=['GET'])
-def prof():
+def teste():
     return "teste", 200
 
 if __name__ == '__main__':
