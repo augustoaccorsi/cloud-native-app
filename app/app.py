@@ -15,7 +15,7 @@ def home():
 def prof():
     return header_text + description + professor, 200
 
-@app.route("/app/hello", methods=['GET'])
+@app.route("/app/teste", methods=['GET'])
 def hello():
     return "Hello World ", 200
 
